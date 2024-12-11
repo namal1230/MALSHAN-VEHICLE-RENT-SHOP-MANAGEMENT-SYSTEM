@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anclogin" prefHeight="805.0" prefWidth="1009.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="1195.0" fitWidth="1596.0" layoutX="-217.0" layoutY="-1.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/1000_F_760501219_kiHiuQ511Bn7NTbARiNOuu7PIKoa3Azk.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="73.0" layoutY="92.0" opacity="0.38" prefHeight="667.0" prefWidth="438.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="124.0" text="Welcome Back">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="218.0" text="Online Id">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Label layoutX="119.0" layoutY="355.0" prefHeight="17.0" prefWidth="222.0" text="Password">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtUserId" focusColor="#44ffc7" layoutX="119.0" layoutY="294.0" prefHeight="25.0" prefWidth="347.0" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <Label layoutX="679.0" layoutY="247.0" text="Malshan Vehicle Rent Shop" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="108.0" layoutY="638.0" onAction="#loginOnAction" prefHeight="40.0" prefWidth="356.0" style="-fx-background-color: #493C34; -fx-background-radius: 20;" text="Login" textFill="#d0c1c1">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtShownPassword" focusColor="#44ffc7" layoutX="126.0" layoutY="431.0" prefHeight="25.0" prefWidth="333.0" unFocusColor="WHITE" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#44ffc7" layoutX="119.0" layoutY="425.0" prefHeight="33.0" prefWidth="333.0" style="-fx-background-radius: 30;" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXPasswordField>
+      <Label layoutX="461.0" layoutY="433.0" onMouseClicked="#shownPasswordOnAction" text="Show">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <ImageView fitHeight="97.0" fitWidth="80.0" layoutX="1260.0" layoutY="675.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logout.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

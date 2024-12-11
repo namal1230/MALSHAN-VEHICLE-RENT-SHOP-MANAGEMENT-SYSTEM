@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncVehicle" prefHeight="490.0" prefWidth="698.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.VehicleManagementFormController">
+   <children>
+      <ImageView fitHeight="471.0" fitWidth="590.0" layoutX="53.0" layoutY="16.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/view-3d-car-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="18.0" text="Vehicle Management Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="73.0" prefHeight="0.0" prefWidth="674.0" />
+      <ImageView fitHeight="63.0" fitWidth="52.0" layoutX="14.0" layoutY="95.0" onMouseClicked="#addVehicleOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/people.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="113.0" text="Add Vehicle">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="52.0" layoutX="12.0" layoutY="161.0" onMouseClicked="#manageInsuranceOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/insurance.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="176.0" text="Manage Insurance">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="39.0" layoutX="16.0" layoutY="230.0" onMouseClicked="#vehicleRepairOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/maintenance.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="237.0" text="Vehicle Repair">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblVehicle" layoutX="178.0" layoutY="184.0" onMouseClicked="#deleteOnAction" prefHeight="299.0" prefWidth="495.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="50.0" text="Id" />
+            <TableColumn fx:id="colBrand" prefWidth="54.0" text="Brand" />
+            <TableColumn fx:id="colModel" prefWidth="52.0" text="Model" />
+            <TableColumn fx:id="colChassieNumber" prefWidth="98.0" text="Chassie_Number" />
+            <TableColumn fx:id="colColor" prefWidth="52.0" text="Color" />
+            <TableColumn fx:id="colDate" prefWidth="44.0" text="Date" />
+            <TableColumn fx:id="colPrice" prefWidth="51.0" text="Price" />
+            <TableColumn fx:id="colRegisterCode" prefWidth="95.0" text="register_Code" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearchVehicle" layoutX="180.0" layoutY="129.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="325.0" />
+      <ImageView fitHeight="45.0" fitWidth="39.0" layoutX="15.0" layoutY="298.0" onMouseClicked="#manageDriverOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/driving-test.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="76.0" layoutY="305.0" text="Manage Driver">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="535.0" layoutY="128.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncVehicle" prefHeight="565.0" prefWidth="684.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.InsuranceManagementFormController">
+   <children>
+      <ImageView fitHeight="418.0" fitWidth="498.0" layoutX="100.0" layoutY="21.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/view-3d-car-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="23.0" text="Insurance Management">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="32.0" layoutY="19.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="69.0" prefHeight="0.0" prefWidth="670.0" />
+      <Label layoutX="38.0" layoutY="87.0" text="Id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="114.0" prefHeight="25.0" prefWidth="157.0" text="Insurance Provider">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtInsuranceProvider" layoutX="230.0" layoutY="114.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="17.0" layoutY="187.0" text="Insurance Policy Number">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtInsurancePolicyNunber" layoutX="229.0" layoutY="186.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="20.0" layoutY="228.0" text="Start Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSave" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="582.0" layoutY="298.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #E67E22;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <TableView fx:id="tblInsurance" layoutX="36.0" layoutY="339.0" onMouseClicked="#getValueOnAction" prefHeight="200.0" prefWidth="624.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colProvider" prefWidth="75.0" text="Provider" />
+            <TableColumn fx:id="colChassieNumber" prefWidth="113.0" text="ChassieNumber" />
+            <TableColumn fx:id="colPollicyNumber" prefWidth="109.0" text="Policy Number" />
+            <TableColumn fx:id="colPollicyType" prefWidth="88.0" text="Policy Type" />
+            <TableColumn fx:id="colStartDate" prefWidth="83.0" text="Start Date" />
+            <TableColumn fx:id="colEndDate" text="End Date" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="41.0" layoutY="298.0" onKeyReleased="#searchInsuranceOnAction" prefHeight="25.0" prefWidth="219.0" />
+      <JFXButton fx:id="btnDelete" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="497.0" layoutY="298.0" onAction="#deleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #F36337;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label fx:id="txtId" layoutX="235.0" layoutY="91.0" prefHeight="17.0" prefWidth="116.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtInsuranceStartDate" layoutX="123.0" layoutY="228.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="17.0" layoutY="151.0" prefHeight="25.0" prefWidth="189.0" text="Vehicle Chassis Number">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleChassisNumber" layoutX="227.0" layoutY="151.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="398.0" layoutY="187.0" text="Policy Type">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtInsurancePolicyType" layoutX="514.0" layoutY="186.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="265.0" layoutY="228.0" text="Expiry Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtInsuranceExpir" layoutX="368.0" layoutY="228.0" prefHeight="25.0" prefWidth="137.0" />
+      <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="416.0" layoutY="298.0" onAction="#clearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #7F8C8D;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="463.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cleaning.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="544.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="628.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="280.0" layoutY="297.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

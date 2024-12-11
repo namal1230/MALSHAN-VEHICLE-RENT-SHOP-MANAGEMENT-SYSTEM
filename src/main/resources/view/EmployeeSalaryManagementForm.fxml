@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncEmployee" prefHeight="462.0" prefWidth="684.0" style="-fx-background-color: white; -fx-background-radius: 100;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.EmployeeSalaryManagementFormController">
+   <children>
+      <ImageView fitHeight="393.0" fitWidth="559.0" layoutX="46.0" layoutY="27.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/drawing285.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="23.0" text="Salary Management Form">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="32.0" layoutY="19.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutY="69.0" prefHeight="0.0" prefWidth="670.0" />
+      <Label layoutX="18.0" layoutY="114.0" text="Salary">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSalary" layoutX="147.0" layoutY="114.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="17.0" layoutY="157.0" text="Bank Account">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBankAccount" layoutX="147.0" layoutY="158.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="342.0" layoutY="87.0" text="Tax">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTax" layoutX="490.0" layoutY="81.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label fx:id="lblPeriod" layoutX="342.0" layoutY="127.0" text="Probation Period">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPeriodDate" layoutX="490.0" layoutY="119.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="342.0" layoutY="170.0" text="Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDate" layoutX="490.0" layoutY="170.0" onAction="#dateOnAction" prefHeight="25.0" prefWidth="157.0" />
+      <JFXButton fx:id="txtSave" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="591.0" layoutY="231.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #E67E22;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnDelete" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="513.0" layoutY="231.0" onAction="#deleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #F36337;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txtSearch" layoutX="23.0" layoutY="226.0" onKeyReleased="#searchEmployeeSOnAction" prefHeight="25.0" prefWidth="260.0" />
+      <TableView fx:id="tblEmployeeSalary" layoutX="14.0" layoutY="268.0" onMouseClicked="#getValueOnAction" prefHeight="200.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="88.0" text="Id" />
+          <TableColumn fx:id="colSalary" prefWidth="122.0" text="Salary" />
+            <TableColumn fx:id="colBankAccount" prefWidth="100.0" text="Bank Account" />
+            <TableColumn fx:id="colTax" prefWidth="96.0" text="Tax" />
+            <TableColumn fx:id="colPeriod" prefWidth="140.0" text="Period" />
+            <TableColumn fx:id="colDate" prefWidth="98.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="82.0" prefHeight="28.0" prefWidth="45.0" text="Id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbId" layoutX="147.0" layoutY="81.0" onAction="#idOnAction" prefHeight="25.0" prefWidth="157.0" />
+      <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="436.0" layoutY="232.0" onAction="#clearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #7F8C8D;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="483.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cleaning.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="558.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="634.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="299.0" layoutY="231.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

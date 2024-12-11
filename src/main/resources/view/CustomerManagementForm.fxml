@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncCustomer" prefHeight="490.0" prefWidth="698.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.CustomerManagementFormController">
+   <children>
+      <ImageView fitHeight="490.0" fitWidth="704.0" layoutX="-6.0" layoutY="6.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Customer-Pain-Points-Simplified.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="18.0" text="Customer Management Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="73.0" prefHeight="0.0" prefWidth="674.0" />
+      <ImageView fitHeight="63.0" fitWidth="52.0" layoutX="14.0" layoutY="95.0" onMouseClicked="#addCustomerOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/people.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="113.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="52.0" layoutX="12.0" layoutY="161.0" onMouseClicked="#managePaymentOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/compensation.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="176.0" text="Manage Payement">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="205.0" layoutY="184.0" onMouseClicked="#getCustomerOnActon" prefHeight="292.0" prefWidth="468.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="62.0" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="64.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="70.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="68.0" text="Contact" />
+            <TableColumn fx:id="colNic" prefWidth="76.0" text="Nic" />
+            <TableColumn fx:id="colDob" prefWidth="57.0" text="DOB" />
+            <TableColumn fx:id="colEmail" prefWidth="70.0" text="Email" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="200.0" layoutY="147.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="297.0" />
+      <ImageView fitHeight="45.0" fitWidth="52.0" layoutX="16.0" layoutY="228.0" onMouseClicked="#paymentHistoryOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/transaction-history.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="243.0" text="Payment History">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="522.0" layoutY="145.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

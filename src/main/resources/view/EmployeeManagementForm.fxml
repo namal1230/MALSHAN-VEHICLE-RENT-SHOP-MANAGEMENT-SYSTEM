@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncEmployee" prefHeight="490.0" prefWidth="704.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.EmployeeManagementFormController">
+   <children>
+      <ImageView fx:id="txtContact" fitHeight="432.0" fitWidth="637.0" layoutX="51.0" layoutY="32.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/drawing285.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="18.0" text="Employee Management Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="73.0" prefHeight="0.0" prefWidth="674.0" />
+      <ImageView fitHeight="63.0" fitWidth="52.0" layoutX="14.0" layoutY="95.0" onMouseClicked="#addEmployeeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/people.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="113.0" text="Add Employee">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="52.0" layoutX="12.0" layoutY="161.0" onMouseClicked="#manageSalaryOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/compensation.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="176.0" text="Manage Salary">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="205.0" layoutY="184.0" onMouseClicked="#getValueOnAction" prefHeight="292.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="54.0" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="64.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="74.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="68.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="91.0" text="Email" />
+            <TableColumn fx:id="colDOB" prefWidth="50.0" text="DOB" />
+            <TableColumn fx:id="colRole" prefWidth="66.0" text="Role" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="200.0" layoutY="129.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="326.0" />
+      <ImageView fitHeight="52.0" fitWidth="45.0" layoutX="15.0" layoutY="226.0" onMouseClicked="#eliminateEmployeesOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/eliminate.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="244.0" text="Eliminated Employees">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="547.0" layoutY="129.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

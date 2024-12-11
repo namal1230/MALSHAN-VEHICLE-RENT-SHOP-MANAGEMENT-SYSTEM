@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="703bf455-42a5-4473-afcb-294e1f16774a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (5)"/>
+	<parameter name="date" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM vehicle_maintenance]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<field name="vehicle_chassis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicle_chassis"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicle_chassis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<field name="maintenance_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="maintenance_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="maintenance_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<field name="last_maintenance" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="last_maintenance"/>
+		<property name="com.jaspersoft.studio.field.label" value="last_maintenance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<field name="next_maintenance" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="next_maintenance"/>
+		<property name="com.jaspersoft.studio.field.label" value="next_maintenance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<field name="repairCost" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="repairCost"/>
+		<property name="com.jaspersoft.studio.field.label" value="repairCost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle_maintenance"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="16" width="210" height="30" uuid="05d05bf4-268d-4be3-aff1-fddb35c5a3a2"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Malshan Vehicle Rent Shop]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="1" width="595" height="1" uuid="48c1075c-62c8-4507-8a10-2e0550b2c8fe"/>
+			</line>
+			<staticText>
+				<reportElement x="-11" y="46" width="171" height="24" uuid="f95ec31e-ae70-4b35-822d-39076c2fc695"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Repair Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="80" width="100" height="20" uuid="5fc9b6e4-cbb5-4815-9026-ded02e14858a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Generated on:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-17" y="101" width="595" height="1" uuid="32168dd0-bf77-4692-a1ff-ef062b87280e"/>
+			</line>
+			<textField>
+				<reportElement x="90" y="80" width="100" height="20" uuid="ae19f5f4-0a4b-4009-ab00-0ecd501b8a8a"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="80" height="30" uuid="0535dd96-b25d-47c3-8dce-77d76fecafb9"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repair ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="40" width="80" height="30" uuid="a9115c93-d6f1-4dfd-9647-0c6b69c9491b"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="40" width="79" height="30" uuid="e9d799a3-1d25-47c7-8157-43499c73c9e5"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repair Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="40" width="78" height="30" uuid="ca311dbd-67e2-452a-a858-85bc566f0c01"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Repair]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="40" width="80" height="30" uuid="c3d5cc21-48da-47f0-a0ff-5fb89d800a5b"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Next Repair]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="40" width="78" height="30" uuid="f4425b1b-8409-4733-927d-cc9425a58680"/>
+				<box>
+					<topPen lineWidth="2.5"/>
+					<leftPen lineWidth="2.5"/>
+					<bottomPen lineWidth="2.5"/>
+					<rightPen lineWidth="2.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-5" width="80" height="30" uuid="52f02023-8502-4192-9804-9030bba060aa"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-63" y="11" width="100" height="30" uuid="6590295f-7eb4-4591-a248-4ec93899ed57"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="-5" width="80" height="30" uuid="b7855d01-f45e-4997-9f1e-212aa4549b11"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{vehicle_chassis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="-5" width="79" height="30" uuid="1dc2376c-80c6-4a93-a29d-0c33c8840fd2"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{maintenance_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="-5" width="76" height="30" uuid="9950e3d1-3159-4721-8ec6-1c83d2914fd5"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{last_maintenance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="-5" width="81" height="30" uuid="548bbcfd-3dd7-46d7-a816-575ec5f40a2f"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{next_maintenance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="-5" width="78" height="30" uuid="ff1c9c3e-5c2e-4d97-ab64-4d690be1a216"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{repairCost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" uuid="1f65995f-2597-4799-b6a0-af5181e4eb9f"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="0" width="595" height="1" uuid="2cd315d8-5dcd-4dee-b190-d822aff42c88"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

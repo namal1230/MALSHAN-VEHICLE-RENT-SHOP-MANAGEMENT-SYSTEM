@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncAddVehicle" prefHeight="447.0" prefWidth="684.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.AddVehicleFormController">
+   <children>
+      <ImageView fitHeight="482.0" fitWidth="554.0" layoutX="103.0" layoutY="6.0" opacity="0.09" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/view-3d-car-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="23.0" text="Add New Vehicle">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="32.0" layoutY="19.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutY="69.0" prefHeight="0.0" prefWidth="670.0" />
+      <Label layoutX="38.0" layoutY="87.0" text="Id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtId" layoutX="145.0" layoutY="87.0" prefHeight="17.0" prefWidth="116.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="114.0" text="Brand">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBrand" layoutX="146.0" layoutY="114.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="17.0" layoutY="157.0" text="Model">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtModel" layoutX="149.0" layoutY="156.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="19.0" layoutY="202.0" text="Chassie Number">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtChassieNumber" layoutX="153.0" layoutY="206.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="21.0" layoutY="249.0" text="Color">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtColor" layoutX="151.0" layoutY="250.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="22.0" layoutY="293.0" text="Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDate" layoutX="152.0" layoutY="298.0" prefHeight="25.0" prefWidth="164.0" />
+      <JFXButton fx:id="btnSave" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="589.0" layoutY="414.0" onAction="#SaveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #F36337;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label layoutX="18.0" layoutY="336.0" text="Price">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPrice" layoutX="160.0" layoutY="339.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="17.0" layoutY="374.0" text="Registration Code">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRegisterCode" layoutX="160.0" layoutY="374.0" prefHeight="25.0" prefWidth="157.0" />
+      <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="317.0" layoutY="201.0" onMouseClicked="#getVehicleOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/settings.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="510.0" layoutY="414.0" onAction="#clearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #7F8C8D;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="628.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="554.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cleaning.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

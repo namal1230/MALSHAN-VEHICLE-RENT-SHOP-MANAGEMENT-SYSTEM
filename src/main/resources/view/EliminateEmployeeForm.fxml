@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncEmployee" prefHeight="490.0" prefWidth="704.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.EliminateEmployeeFormController">
+   <children>
+      <ImageView fx:id="txtContact" fitHeight="432.0" fitWidth="637.0" layoutX="51.0" layoutY="32.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/drawing285.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="122.0" layoutY="34.0" text="Employee Management Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="73.0" prefHeight="0.0" prefWidth="674.0" />
+      <TableView fx:id="tblEmployee" layoutX="17.0" layoutY="184.0" onMouseClicked="#getValueOnAction" prefHeight="292.0" prefWidth="674.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="54.0" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="119.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="121.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="110.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="115.0" text="Email" />
+            <TableColumn fx:id="colDOB" prefWidth="78.0" text="DOB" />
+            <TableColumn fx:id="colRole" prefWidth="76.0" text="Role" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="29.0" layoutY="123.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="393.0" />
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="42.0" layoutY="29.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="545.0" layoutY="138.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

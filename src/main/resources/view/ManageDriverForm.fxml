@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncVehicle" prefHeight="565.0" prefWidth="757.0" style="-fx-background-color: white; -fx-background-radius: 80;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.ManageDriverFormController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="585.0" layoutX="96.0" layoutY="-1.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/view-3d-car-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="23.0" text="Driver Management">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="32.0" layoutY="19.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutY="69.0" prefHeight="0.0" prefWidth="670.0" />
+      <Label layoutX="20.0" layoutY="85.0" text="Full Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="116.0" prefHeight="25.0" prefWidth="184.0" text="Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="220.0" text="Date of Birth">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="149.0" text="Contact Number">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDob" layoutX="191.0" layoutY="220.0" prefHeight="25.0" prefWidth="164.0" />
+      <JFXButton fx:id="btnSave" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="633.0" layoutY="298.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #E67E22;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <TableView fx:id="tblDriver" layoutX="36.0" layoutY="339.0" onMouseClicked="#selectOnAction" prefHeight="200.0" prefWidth="687.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="colLicens" prefWidth="101.0" text="License Number" />
+            <TableColumn fx:id="colLicenseExpiry" prefWidth="101.0" text="License Expiry" />
+            <TableColumn fx:id="colLicenseType" prefWidth="101.0" text="Licen Type" />
+            <TableColumn fx:id="colMedical" prefWidth="83.0" text="Medical" />
+            <TableColumn fx:id="colStatus" prefWidth="78.0" text="Status" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="41.0" layoutY="298.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="257.0" />
+      <JFXButton fx:id="btnDelete" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="548.0" layoutY="298.0" onAction="#deleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #F36337;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txtName" layoutX="195.0" layoutY="82.0" prefHeight="25.0" prefWidth="157.0" />
+      <JFXTextField fx:id="txtAddress" layoutX="193.0" layoutY="117.0" prefHeight="25.0" prefWidth="157.0" />
+      <DatePicker fx:id="txtLicenseExp" layoutX="556.0" layoutY="132.0" prefHeight="25.0" prefWidth="164.0" />
+      <JFXTextField fx:id="txtContactNumber" layoutX="195.0" layoutY="148.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="23.0" layoutY="253.0" text="NIC">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNic" layoutX="193.0" layoutY="247.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="402.0" layoutY="90.0" text="License Number">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLicense" layoutX="558.0" layoutY="91.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="20.0" layoutY="180.0" text="Email Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" layoutX="193.0" layoutY="182.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="402.0" layoutY="129.0" text="License Expiry Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLicenseType" layoutX="560.0" layoutY="164.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="403.0" layoutY="168.0" text="License Type">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="205.0" text="Medical Clearance">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMedical" layoutX="559.0" layoutY="198.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label layoutX="407.0" layoutY="237.0" text="Status">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtStatus" layoutX="557.0" layoutY="236.0" prefHeight="25.0" prefWidth="157.0" />
+      <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="468.0" layoutY="298.0" onAction="#clearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #7F8C8D;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="592.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="677.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="514.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cleaning.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="329.0" layoutY="297.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

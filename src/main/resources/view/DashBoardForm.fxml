@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncDash" prefHeight="588.0" prefWidth="887.0" style="-fx-background-color: #494949;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="1095.0" fitWidth="1630.0" layoutX="-35.0" layoutY="14.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/close-up-fuel-level-gauge-vehicle.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="546.0" layoutY="585.0" onMouseClicked="#logoutDashOnAction" prefHeight="44.0" prefWidth="344.0" text="Log Out " textAlignment="CENTER" textFill="#70cbff">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="231.0" layoutY="59.0" onMouseClicked="#customerOnAction" onMouseMoved="#customerOnMouse" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/customer.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="212.0" layoutX="618.0" layoutY="72.0" onMouseClicked="#vehicleOnAction" onMouseMoved="#vehicleOnMouse" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/11452724.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="127.0" fitWidth="109.0" layoutX="1073.0" layoutY="55.0" onMouseClicked="#employeeOnAction" onMouseMoved="#employeeOnMouse" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/employee.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="selectlbl" layoutX="571.0" layoutY="513.0" text="Please Select One Of This" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="AncDashBoard" layoutX="357.0" layoutY="181.0" prefHeight="487.0" prefWidth="684.0" style="-fx-background-color: white;" visible="false" />
+      <ImageView fx:id="imgBack" fitHeight="87.0" fitWidth="85.0" layoutX="1188.0" layoutY="548.0" onMouseClicked="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/left.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncCustomer" prefHeight="475.0" prefWidth="670.0" style="-fx-background-color: white; -fx-background-radius: 100;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.malshanrentshopmanagement.controller.CustomerPaymentHistoryFormController">
+   <children>
+      <ImageView fitHeight="470.0" fitWidth="703.0" layoutY="5.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Customer-Pain-Points-Simplified.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="23.0" text="Manage Payments History">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="32.0" layoutY="19.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="69.0" prefHeight="0.0" prefWidth="670.0" />
+      <TableView fx:id="tblPaymentHistory" layoutX="17.0" layoutY="240.0" prefHeight="200.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="111.0" text="Customer Id" />
+          <TableColumn fx:id="colMethod" prefWidth="81.0" text="Method" />
+            <TableColumn fx:id="colCard" prefWidth="103.0" text="Card Number" />
+            <TableColumn fx:id="colVehicle" prefWidth="79.0" text="Vehicle Id" />
+            <TableColumn fx:id="colRental" prefWidth="97.0" text="Rental Period" />
+            <TableColumn fx:id="colLocation" prefWidth="113.0" text="Location Distance" />
+            <TableColumn fx:id="colDriverId" prefWidth="65.0" text="Driver Id" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="27.0" layoutY="197.0" onMouseClicked="#searchOnAction" prefHeight="25.0" prefWidth="370.0" />
+      <JFXButton buttonType="RAISED" layoutX="524.0" layoutY="196.0" onAction="#generateReportOnAction" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #2ad583;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
