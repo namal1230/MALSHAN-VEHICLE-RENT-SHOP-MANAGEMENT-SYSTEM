@@ -29,6 +29,47 @@ It supports:
 - Regex-based input validations  
 
 This project is **portfolio-ready** and simulates a **real-world rental shop workflow**.
+<img width="1366" height="768" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/5d17d4a1-f8ff-4ba3-a682-27ef2f94924f" />
+## Login Page
+
+Users can log in with **User ID** and **Password**.  
+- Includes a **“Show Password” toggle** to view or hide the password.  
+- Validates input and displays an **error message** for incorrect credentials.  
+- Successful login opens the **Main Menu** to access all modules: Customers, Vehicles, Drivers, Employees, Payments, Maintenance, Insurance, and Reports.
+
+<img width="1366" height="768" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/1008bf9c-d1c6-448a-9f61-c3373efe06d6" />
+
+## User Dashboard
+
+After login, users access the **User Dashboard**, which provides quick access to the system’s main modules with **three main buttons**:
+
+1. **Customer & Rental Management**  
+   - Manage Customers, Vehicle Rentals, and Customer Payments.  
+   - Add, update, view, or delete customer and rental information.  
+
+2. **Vehicle & Driver Management**  
+   - Manage Vehicles and Drivers.  
+   - Add new vehicles, assign drivers, track availability, and view details.  
+
+3. **Employee & Reports Management**  
+   - Manage Employees, Employee Salaries, Maintenance, Insurance, and generate reports.  
+   - Access salary details, maintenance history, insurance info, and create reports.
+
+  <img width="1366" height="768" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/e7451723-0f06-4321-8862-db3675998052" />
+
+<img width="1366" height="768" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/d9ef2c29-1131-4b99-b3b7-976c0bd24f9d" />
+<img width="1366" height="768" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/b456e1bf-87d1-4174-be21-a69bffdcfb6e" />
+
+
+## Report View
+- Select report type from menu.  
+- View summary of data in a **table format**.  
+- Option to **export reports** (CSV, PDF) for professional use.  
+- Works with **all modules**: Customers, Vehicles, Drivers, Employees, Maintenance, Insurance.
+<img width="1366" height="768" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/58a23ffd-e23d-487f-8e97-0b4ade828c6f" />
+<img width="1366" height="768" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/9f3e4dd3-7233-4176-b3f0-706fa193ab68" />
+
+
 
 ---
 
@@ -142,6 +183,3 @@ mvn exec:java -Dexec.mainClass="com.malshan.Main" # Replace with your main class
 This project is **open for learning and portfolio purposes**.
 Feel free to fork, modify, and use it for educational or personal projects.
 
-```
-Do you want me to do that next?
-```
